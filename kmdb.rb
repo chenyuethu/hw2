@@ -167,6 +167,23 @@ new_actor.save
 
 # puts Actor.all.inspect
 
+# insert new rows in roles table
+movie_1 = Movie.find_by({"title" => "Batman Begins"})
+movie_2 = Movie.find_by({"title" => "The Dark Knight"})
+movie_3= Movie.find_by({"title" => "The Dark Knight Rises"})
+
+bale = Actor.find_by({"name" => "Christian Bale"})
+caine = Actor.find_by({"name" => "Michael Caine"})
+neeson = Actor.find_by({"name" => "Liam Neeson"})
+holmes = Actor.find_by({"name" => "Katie Holmes"})
+oldman = Actor.find_by({"name" => "Gary Oldman"})
+ledger = Actor.find_by({"name" => "Heath Ledger"})
+eckhart = Actor.find_by({"name" => "Aaron Eckhart"})
+gyllenhaal = Actor.find_by({"name" => "Maggie Gyllenhaal"})
+hardy = Actor.find_by({"name" => "Tom Hardy"})
+levitt = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+hathaway = Actor.find_by({"name" => "Anne Hathaway"})
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
