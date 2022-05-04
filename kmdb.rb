@@ -86,7 +86,6 @@ Role.destroy_all
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
 
 # insert new rows in studios table
 new_studio = Studio.new
@@ -183,6 +182,98 @@ gyllenhaal = Actor.find_by({"name" => "Maggie Gyllenhaal"})
 hardy = Actor.find_by({"name" => "Tom Hardy"})
 levitt = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
 hathaway = Actor.find_by({"name" => "Anne Hathaway"})
+
+new_role = Role.new
+new_role["movie_id"] = movie_1["id"]
+new_role["actor_id"] = bale["id"]
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_1["id"]
+new_role["actor_id"] = caine["id"]
+new_role["character_name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_1["id"]
+new_role["actor_id"] = neeson["id"]
+new_role["character_name"] = "Ra's Al Ghul"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_1["id"]
+new_role["actor_id"] = holmes["id"]
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_1["id"]
+new_role["actor_id"] = oldman["id"]
+new_role["character_name"] = "Commissioner Gordon"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_2["id"]
+new_role["actor_id"] = bale["id"]
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_2["id"]
+new_role["actor_id"] = ledger["id"]
+new_role["character_name"] = "Joker"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_2["id"]
+new_role["actor_id"] = eckhart["id"]
+new_role["character_name"] = "Harvey Dent"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_2["id"]
+new_role["actor_id"] = caine["id"]
+new_role["character_name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_2["id"]
+new_role["actor_id"] = gyllenhaal["id"]
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_3["id"]
+new_role["actor_id"] = bale["id"]
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_3["id"]
+new_role["actor_id"] = oldman["id"]
+new_role["character_name"] = "Commissioner Gordon"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_3["id"]
+new_role["actor_id"] = hardy["id"]
+new_role["character_name"] = "Bane"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_3["id"]
+new_role["actor_id"] = levitt["id"]
+new_role["character_name"] = "John Blake"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = movie_3["id"]
+new_role["actor_id"] = hathaway["id"]
+new_role["character_name"] = "Selina Kyle"
+new_role.save
+
+puts Role.all.inspect
 
 # Prints a header for the movies output
 puts "Movies"
