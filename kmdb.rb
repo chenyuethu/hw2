@@ -273,7 +273,7 @@ new_role["actor_id"] = hathaway["id"]
 new_role["character_name"] = "Selina Kyle"
 new_role.save
 
-puts Role.all.inspect
+# puts Role.all.inspect
 
 # Prints a header for the movies output
 puts "Movies"
@@ -282,6 +282,18 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
+movies = Movie.all
+for movie in movies
+    movie_title = movie["title"]
+    movie_year = movie["year_released"]
+    movie_rate = movie["rated"]
+    movie_studio = Studio.find_by({"id" => movie["studio_id"]})
+    movie_studio_name = movie_studio["name"]
+    puts "#{movie_title}   #{movie_year}   #{movie_rate}   #{movie_studio_name}"
+end
+
+
 
 # Prints a header for the cast output
 puts ""
